@@ -16,13 +16,12 @@ const api = {
   },
 
   async post(body) {
-    const res = await fetch(BASE_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    })
-    return res.json()
-  },
+  const res = await fetch(BASE_URL, {
+    method: 'POST',
+    body: JSON.stringify(body),
+  })
+  return res.json()
+},
 
   // ── Users ────────────────────────────────────────────────
   saveUser: (data)        => api.post({ action: 'saveUser', data }),
