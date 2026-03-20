@@ -1,7 +1,7 @@
 const BASE_URL = import.meta.env.VITE_APPS_SCRIPT_URL
 
 export const IS_CONFIGURED =
-  !!BASE_URL && BASE_URL !== 'https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec'
+  !!BASE_URL
 
 /** Fire-and-forget — never blocks the UI */
 export function fire(asyncFn) {
